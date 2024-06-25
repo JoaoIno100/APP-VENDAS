@@ -13,6 +13,7 @@ type ReservationResponse struct {
 	Email      string `json:"email"`
 	Spot       string `json:"spot"`
 	TicketKind string `json:"ticket_kind"`
+	TicketType string `json:"ticket_type"`
 	Status     string `json:"status"`
 	EventID    string `json:"event_id"`
 }

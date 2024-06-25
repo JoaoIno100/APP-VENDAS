@@ -48,7 +48,7 @@ func (uc *ListSpotsUseCase) Execute(input ListSpotsInputDTO) (*ListSpotsOutputDT
 		Location:     event.Location,
 		Organization: event.Organization,
 		Rating:       string(event.Rating),
-		Date:         event.Date.Format("2006-01-02 15:04:04"),
+		Date:         event.Date.Format("2006-01-02 15:04:05"),
 		ImageURL:     event.ImageURL,
 		Capacity:     event.Capacity,
 		Price:        event.Price,

@@ -22,6 +22,10 @@ type GetEventUseCase struct {
 	repo domain.EventRepository
 }
 
+func NewGetEventUseCase(repo domain.EventRepository) *GetEventUseCase {
+	return &GetEventUseCase{repo: repo}
+}
+
 func (uc *GetEventUseCase) Execute(input GetEventInputDTO) (*GetEventOutputDTO, error) {
 	event, err := uc.repo.FindEventByID(input.ID)
 	if err != nil {

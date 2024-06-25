@@ -10,7 +10,7 @@ type ListEventsUseCase struct {
 	repo domain.EventRepository
 }
 
-func newListEventsUseCase(repo domain.EventRepository) *ListEventsUseCase {
+func NewListEventsUseCase(repo domain.EventRepository) *ListEventsUseCase {
 	return &ListEventsUseCase{repo: repo}
 }
 
@@ -28,7 +28,7 @@ func (uc *ListEventsUseCase) Execute() (*ListEventsOutputDTO, error) {
 			Location:     event.Location,
 			Organization: event.Organization,
 			Rating:       string(event.Rating),
-			Date:         event.Date.Format("2006-01-02 15:04:04"),
+			Date:         event.Date.Format("2006-01-02 15:04:05"),
 			ImageURL:     event.ImageURL,
 			Capacity:     event.Capacity,
 			Price:        event.Price,

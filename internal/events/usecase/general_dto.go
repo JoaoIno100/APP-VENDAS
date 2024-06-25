@@ -21,3 +21,10 @@ type SpotDTO struct {
 	Status   string `json:"status"`
 	TicketID string `json:"ticket_id"`
 }
+
+type TicketDTO struct {
+	ID         string  `json:"id"`
+	SpotID     string  `json:"spot_id"`
+	TicketType string  `json:"ticket_type"`
+	Price      float64 `json:"price"`
+}
